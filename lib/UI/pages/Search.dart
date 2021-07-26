@@ -117,19 +117,19 @@ class _SearchState extends State<Search> {
                         ),
                         DropdownMenuItem(
                           child: Text(AppLocalizations.of(context)
-                              .translate("fertilizers")
+                              .translate("road_bike")
                               .capitalize),
                           value: 1,
                         ),
                         DropdownMenuItem(
                           child: Text(AppLocalizations.of(context)
-                              .translate("seeds")
+                              .translate("mtb")
                               .capitalize),
                           value: 2,
                         ),
                         DropdownMenuItem(
                           child: Text(AppLocalizations.of(context)
-                              .translate("pesticide")
+                              .translate("clothes")
                               .capitalize),
                           value: 3,
                         ),
@@ -138,6 +138,12 @@ class _SearchState extends State<Search> {
                               .translate("tools")
                               .capitalize),
                           value: 4,
+                        ),
+                        DropdownMenuItem(
+                          child: Text(AppLocalizations.of(context)
+                              .translate("tire")
+                              .capitalize),
+                          value: 5,
                         ),
                       ],
                       onChanged: (value) {

@@ -30,6 +30,13 @@ class _HomeState extends State<Home> {
                 style: TextStyle(
                   fontSize: 100,
                   color: Theme.of(context).primaryColor,
+                  shadows: [
+                    Shadow(
+                      blurRadius: 5.0,
+                      color: Colors.black,
+                      offset: Offset(2.0, 2.0),
+                    )
+                  ]
                 ),
               ),
             ),

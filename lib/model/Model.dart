@@ -19,10 +19,11 @@ class Model {
 
   List<String> categorie = [
     "all",
-    "fertilizers",
-    "seeds",
-    "pesticide",
-    "tools"
+    "road_bike",
+    "mtb",
+    "clothes",
+    "tools",
+    "tire"
   ];
 
   bool logged = false;

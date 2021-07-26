@@ -46,24 +46,25 @@ class _MyDrawerState extends State<MyDrawer> {
               Row(
                 children: [
                   Align(
-                      alignment: Alignment.topCenter,
-                      child: CircularIconButton(
-                        icon: Icons.person,
-                        onPressed: () {
-                          _login();
-                        },
-                      ),
-                  ),
-                  Model.sharedInstance.logged?
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                    alignment: Alignment.topCenter,
                     child: CircularIconButton(
-                      icon: Icons.logout,
+                      icon: Icons.person,
                       onPressed: () {
-                        _logout();
+                        _login();
                       },
                     ),
-                  ):Container(),
+                  ),
+                  Model.sharedInstance.logged
+                      ? Padding(
+                          padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                          child: CircularIconButton(
+                            icon: Icons.logout,
+                            onPressed: () {
+                              _logout();
+                            },
+                          ),
+                        )
+                      : Container(),
                 ],
               ),
               Row(
@@ -88,41 +89,76 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.home),
-            title:
-                Text(AppLocalizations.of(context).translate("home").capitalize),
+            selectedTileColor: Theme.of(context).cardColor,
+            hoverColor: Theme.of(context).textSelectionColor,
+            leading: Icon(
+              Icons.home,
+              color: Theme.of(context).primaryColorDark,
+            ),
+            title: Text(
+              AppLocalizations.of(context).translate("home").capitalize,
+              style: TextStyle(color: Theme.of(context).primaryColorDark),
+            ),
             selected: _selectedDrawerItemIndex == DrawerItemTypes.HOME,
             autofocus: _selectedDrawerItemIndex == DrawerItemTypes.HOME,
             onTap: () => _onSelectDrawerItem(DrawerItemTypes.HOME),
           ),
           ListTile(
-            leading: Icon(Icons.search),
+            selectedTileColor: Theme.of(context).cardColor,
+            hoverColor: Theme.of(context).textSelectionColor,
+            leading: Icon(
+              Icons.search,
+              color: Theme.of(context).primaryColorDark
+            ),
             title: Text(
-                AppLocalizations.of(context).translate("search").capitalize),
+              AppLocalizations.of(context).translate("search").capitalize,
+              style: TextStyle(color: Theme.of(context).primaryColorDark),
+            ),
             selected: _selectedDrawerItemIndex == DrawerItemTypes.SEARCH,
             autofocus: _selectedDrawerItemIndex == DrawerItemTypes.SEARCH,
             onTap: () => _onSelectDrawerItem(DrawerItemTypes.SEARCH),
           ),
           ListTile(
-            leading: Icon(Icons.info),
+            selectedTileColor: Theme.of(context).cardColor,
+            hoverColor: Theme.of(context).textSelectionColor,
+            leading: Icon(
+              Icons.info,
+              color: Theme.of(context).primaryColorDark
+            ),
             title: Text(
-                AppLocalizations.of(context).translate("contacts").capitalize),
+              AppLocalizations.of(context).translate("contacts").capitalize,
+              style: TextStyle(color: Theme.of(context).primaryColorDark),
+            ),
             selected: _selectedDrawerItemIndex == DrawerItemTypes.CONTACTS,
             autofocus: _selectedDrawerItemIndex == DrawerItemTypes.CONTACTS,
             onTap: () => _onSelectDrawerItem(DrawerItemTypes.CONTACTS),
           ),
           ListTile(
-            leading: Icon(Icons.shopping_cart),
-            title:
-                Text(AppLocalizations.of(context).translate("cart").capitalize),
+            selectedTileColor: Theme.of(context).cardColor,
+            hoverColor: Theme.of(context).textSelectionColor,
+            leading: Icon(
+              Icons.shopping_cart,
+              color: Theme.of(context).primaryColorDark
+            ),
+            title: Text(
+              AppLocalizations.of(context).translate("cart").capitalize,
+              style: TextStyle(color: Theme.of(context).primaryColorDark),
+            ),
             selected: _selectedDrawerItemIndex == DrawerItemTypes.CART,
             autofocus: _selectedDrawerItemIndex == DrawerItemTypes.CART,
             onTap: () => _onSelectDrawerItem(DrawerItemTypes.CART),
           ),
           ListTile(
-            leading: Icon(Icons.list_alt_outlined),
+            selectedTileColor: Theme.of(context).cardColor,
+            hoverColor: Theme.of(context).textSelectionColor,
+            leading: Icon(
+              Icons.list_alt_outlined,
+              color: Theme.of(context).primaryColorDark
+            ),
             title: Text(
-                AppLocalizations.of(context).translate("order").capitalize),
+              AppLocalizations.of(context).translate("order").capitalize,
+              style: TextStyle(color: Theme.of(context).primaryColorDark),
+            ),
             selected: _selectedDrawerItemIndex == DrawerItemTypes.ORDERS,
             autofocus: _selectedDrawerItemIndex == DrawerItemTypes.ORDERS,
             onTap: () => _onSelectDrawerItem(DrawerItemTypes.ORDERS),
@@ -184,8 +220,7 @@ class _MyDrawerState extends State<MyDrawer> {
         PageRouteBuilder(
           opaque: false,
           transitionDuration: Duration(milliseconds: 800),
-          pageBuilder: (BuildContext context, _, __) =>
-              Layout(page: Home()),
+          pageBuilder: (BuildContext context, _, __) => Layout(page: Home()),
         ),
       );
     });

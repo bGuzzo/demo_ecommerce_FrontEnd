@@ -56,5 +56,9 @@
   "details_ProductCard": "Details",
   "cont_addr": "Address: Via Milano n.7, Rome, Italy",
   "cont_telep": "Telephone/Fax: 3210457896",
-  "cont_email": "Email: info@consorzioagrario.it"
+  "cont_email": "Email: info@consorzioagrario.it",
+  "road_bike": "Road bike",
+  "mtb": "MTB",
+  "clothes": "Clothes",
+  "tire": "Tire an Tube"
 }

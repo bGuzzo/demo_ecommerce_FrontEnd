@@ -1,7 +1,7 @@
 class Constants {
   // app info
   static final String APP_VERSION = "0.0.1";
-  static final String APP_NAME = "Consorzio Agrario";
+  static final String APP_NAME = "Cycling Shop";
 
   // addresses
   static final String ADDRESS_STORE_SERVER = "localhost:9090";
