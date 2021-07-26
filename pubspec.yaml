@@ -1,0 +1,39 @@
+name: FrontEnd
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_localizations: # Add this line
+    sdk: flutter         # Add this line
+
+
+  cupertino_icons: ^1.0.2
+  http: ^0.13.3
+  image_picker: ^0.7.5+3
+  avatar_view: ^1.0.0+4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - localizable/it.json
+    - localizable/en.json
+    - images/user.png
+    - images/1.jpg
+    - images/2.jpg
+    - images/3.jpg
+    - images/4.jpg
+    - images/home.jpg
