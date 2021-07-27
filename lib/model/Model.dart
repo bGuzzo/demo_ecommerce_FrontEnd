@@ -33,7 +33,6 @@ class Model {
     try {
       Map<String, String> params = Map();
       params["client_id"] = Constants.CLIENT_ID;
-      //params["client_secret"] = Constants.CLIENT_SECRET;
       params["username"] = username;
       params["password"] = password;
       params["grant_type"] = "password";
@@ -70,7 +69,6 @@ class Model {
       Map<String, String> params = Map();
       params["grant_type"] = "refresh_token";
       params["client_id"] = Constants.CLIENT_ID;
-      //params["client_secret"] = Constants.CLIENT_SECRET;
       params["refresh_token"] = _authenticationData.refreshToken;
       String result = await _restManager.makePostRequest(
           Constants.ADDRESS_AUTHENTICATION_SERVER,
@@ -95,7 +93,6 @@ class Model {
       logged = false;
       userLogged = "";
       params["client_id"] = Constants.CLIENT_ID;
-      //params["client_secret"] = Constants.CLIENT_SECRET;
       params["refresh_token"] = _authenticationData.refreshToken;
       await _restManager.makePostRequest(
           Constants.ADDRESS_AUTHENTICATION_SERVER,
@@ -147,18 +144,18 @@ class Model {
       String rawResult = await _restManager.makePostRequest(
           Constants.ADDRESS_STORE_SERVER, Constants.REQUEST_ADD_USER, user,
           params: params);
-      print(rawResult.toString()); //DEBUGS
+      //print(rawResult.toString()); //DEBUGS
       if (rawResult
           .contains(Constants.RESPONSE_ERROR_MAIL_USER_ALREADY_EXISTS)) {
-        print("error_email_already_used");
+        //print("error_email_already_used");
         return RegistrationResult.error_email_already_used;
       }
       if (rawResult
           .contains(Constants.RESPONSE_ERROR_USERNAME_ALREADY_EXISTS)) {
-        print("error_username_already_used");
+        //print("error_username_already_used");
         return RegistrationResult.error_username_already_used;
       } else {
-        print("registred");
+        //print("registred");
         return RegistrationResult.registered;
       }
     } catch (e) {
@@ -185,8 +182,7 @@ class Model {
           params: params);
       return s;
     } catch (e) {
-      print(e.toString());
-      print("Siamo caduti nell'eccezione");
+      print("Siamo caduti nell'eccezione " + e.toString());
       return null;
     }
   }
@@ -218,10 +214,10 @@ class Model {
           Constants.REQUEST_VISUALIZZA_CARRELLO,
           params);
       if (ricevuto == null || ricevuto == "") {
-        print("ricevuto è vuoto");
+        //print("ricevuto è vuoto");
         return map;
       }
-      print("ricevuto " + ricevuto);
+      //print("ricevuto " + ricevuto);
       carrello = List<Product>.from(
           json.decode(ricevuto).map((i) => Product.fromJson(i)).toList());
       for (Product p in carrello) {

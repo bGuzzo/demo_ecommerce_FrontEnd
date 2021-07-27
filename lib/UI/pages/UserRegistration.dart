@@ -107,8 +107,8 @@ class _UserRegistrationState extends State<UserRegistration> {
                   CircularIconButton(
                     icon: Icons.person_add,
                     onPressed: () {
-                      print("_emptyField " + _emptyField.toString());
-                      print("_justAddedUser " + _registrationResult.toString());
+                      //print("_emptyField " + _emptyField.toString());
+                      //print("_justAddedUser " + _registrationResult.toString());
                       _register();
                     },
                   ),

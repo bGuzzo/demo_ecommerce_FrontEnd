@@ -26,7 +26,7 @@ class _ShoppingCartState extends State<ShoppingCart> {
       map = null;
       Model.sharedInstance.getProdotti2().then((value) {
         setState(() {
-          print(value);
+          //print(value);
           map = value;
           _searching = false;
         });

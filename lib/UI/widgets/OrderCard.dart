@@ -117,7 +117,7 @@ class _AcquistoCardState extends State<AcquistoCard> {
   void _dettagli(int idOrdine) {
     setState(() {
       Model.sharedInstance.getDettagliOrdine(idOrdine).then((value) {
-        print(value);
+        //print(value);
         showDialog(
           context: context,
           builder: (BuildContext context) => AlertDialog(

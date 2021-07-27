@@ -288,9 +288,9 @@ class _ProductCardState extends State<ProductCard> {
       setState(() {
         Model.sharedInstance.getProdotti2().then((value) {
           if (value.containsKey(product)) qtaVecchia = value[product];
-          print("ProductCard getProdotti2() = " + value.toString());
-          print("product" + product.toString());
-          print("qtaVecchia" + qtaVecchia.toString());
+          //print("ProductCard getProdotti2() = " + value.toString());
+          //print("product" + product.toString());
+          //print("qtaVecchia" + qtaVecchia.toString());
           setState(() {
             Model.sharedInstance.aggiornaCarrello(
                 Model.sharedInstance.userLogged,
