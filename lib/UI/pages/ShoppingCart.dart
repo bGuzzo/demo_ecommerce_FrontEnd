@@ -115,28 +115,29 @@ class _ShoppingCartState extends State<ShoppingCart> {
 
   Widget medium() {
     return Align(
-        alignment: Alignment.topCenter,
-        child: (map!=null) ?
-        ((map.length!=0) ?
-        RawMaterialButton(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0)),
-            fillColor: Theme.of(context).primaryColor,
-            elevation: 2.0,
-            onPressed: () {
-              _acquista();
-            },
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(13, 5, 13, 5),
-              child: Text(
-                AppLocalizations.of(context).translate("buy").capitalize,
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Theme.of(context).backgroundColor,
-                ),
-              ),
-            )
-        ):Container()):Container(),
+      alignment: Alignment.topCenter,
+      child: (map != null)
+          ? ((map.length != 0)
+              ? RawMaterialButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0)),
+                  fillColor: Theme.of(context).primaryColor,
+                  elevation: 2.0,
+                  onPressed: () {
+                    _acquista();
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(13, 5, 13, 5),
+                    child: Text(
+                      AppLocalizations.of(context).translate("buy").capitalize,
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Theme.of(context).backgroundColor,
+                      ),
+                    ),
+                  ))
+              : Container())
+          : Container(),
     );
   }
 

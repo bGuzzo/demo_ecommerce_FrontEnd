@@ -1,5 +1,4 @@
 import 'package:FrontEnd/UI/behaviors/AppLocalizations.dart';
-import 'package:FrontEnd/model/objects/Acquisto.dart';
 import 'package:FrontEnd/model/support/extensions/StringCapitalization.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +13,6 @@ class NoOrders extends StatefulWidget {
 }
 
 class _NoOrdersState extends State<NoOrders> {
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

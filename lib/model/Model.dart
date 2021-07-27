@@ -29,7 +29,6 @@ class Model {
   bool logged = false;
   String userLogged = "";
 
-
   Future<LogInResult> logIn(String username, String password) async {
     try {
       Map<String, String> params = Map();
@@ -291,5 +290,4 @@ class Model {
       return s;
     }
   }
-
 }

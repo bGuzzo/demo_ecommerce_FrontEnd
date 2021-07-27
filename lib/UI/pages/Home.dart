@@ -28,16 +28,15 @@ class _HomeState extends State<Home> {
                 AppLocalizations.of(context).translate("welcome").capitalize +
                     "!",
                 style: TextStyle(
-                  fontSize: 100,
-                  color: Theme.of(context).primaryColor,
-                  shadows: [
-                    Shadow(
-                      blurRadius: 5.0,
-                      color: Colors.black,
-                      offset: Offset(2.0, 2.0),
-                    )
-                  ]
-                ),
+                    fontSize: 100,
+                    color: Theme.of(context).primaryColor,
+                    shadows: [
+                      Shadow(
+                        blurRadius: 5.0,
+                        color: Colors.black,
+                        offset: Offset(2.0, 2.0),
+                      )
+                    ]),
               ),
             ),
           ],
@@ -45,5 +44,4 @@ class _HomeState extends State<Home> {
       ),
     ));
   }
-
 }

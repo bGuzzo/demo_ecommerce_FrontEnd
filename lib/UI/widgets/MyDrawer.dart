@@ -106,10 +106,8 @@ class _MyDrawerState extends State<MyDrawer> {
           ListTile(
             selectedTileColor: Theme.of(context).cardColor,
             hoverColor: Theme.of(context).textSelectionColor,
-            leading: Icon(
-              Icons.search,
-              color: Theme.of(context).primaryColorDark
-            ),
+            leading:
+                Icon(Icons.search, color: Theme.of(context).primaryColorDark),
             title: Text(
               AppLocalizations.of(context).translate("search").capitalize,
               style: TextStyle(color: Theme.of(context).primaryColorDark),
@@ -121,10 +119,8 @@ class _MyDrawerState extends State<MyDrawer> {
           ListTile(
             selectedTileColor: Theme.of(context).cardColor,
             hoverColor: Theme.of(context).textSelectionColor,
-            leading: Icon(
-              Icons.info,
-              color: Theme.of(context).primaryColorDark
-            ),
+            leading:
+                Icon(Icons.info, color: Theme.of(context).primaryColorDark),
             title: Text(
               AppLocalizations.of(context).translate("contacts").capitalize,
               style: TextStyle(color: Theme.of(context).primaryColorDark),
@@ -136,10 +132,8 @@ class _MyDrawerState extends State<MyDrawer> {
           ListTile(
             selectedTileColor: Theme.of(context).cardColor,
             hoverColor: Theme.of(context).textSelectionColor,
-            leading: Icon(
-              Icons.shopping_cart,
-              color: Theme.of(context).primaryColorDark
-            ),
+            leading: Icon(Icons.shopping_cart,
+                color: Theme.of(context).primaryColorDark),
             title: Text(
               AppLocalizations.of(context).translate("cart").capitalize,
               style: TextStyle(color: Theme.of(context).primaryColorDark),
@@ -151,10 +145,8 @@ class _MyDrawerState extends State<MyDrawer> {
           ListTile(
             selectedTileColor: Theme.of(context).cardColor,
             hoverColor: Theme.of(context).textSelectionColor,
-            leading: Icon(
-              Icons.list_alt_outlined,
-              color: Theme.of(context).primaryColorDark
-            ),
+            leading: Icon(Icons.list_alt_outlined,
+                color: Theme.of(context).primaryColorDark),
             title: Text(
               AppLocalizations.of(context).translate("order").capitalize,
               style: TextStyle(color: Theme.of(context).primaryColorDark),

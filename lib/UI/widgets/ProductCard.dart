@@ -1,4 +1,3 @@
-import 'package:avatar_view/avatar_view.dart';
 import 'package:FrontEnd/UI/behaviors/AppLocalizations.dart';
 import 'package:FrontEnd/UI/pages/Layout.dart';
 import 'package:FrontEnd/UI/pages/ShoppingCart.dart';
@@ -7,6 +6,7 @@ import 'package:FrontEnd/UI/widgets/CircularIconButton.dart';
 import 'package:FrontEnd/model/Model.dart';
 import 'package:FrontEnd/model/objects/Product.dart';
 import 'package:FrontEnd/model/support/extensions/StringCapitalization.dart';
+import 'package:avatar_view/avatar_view.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatefulWidget {

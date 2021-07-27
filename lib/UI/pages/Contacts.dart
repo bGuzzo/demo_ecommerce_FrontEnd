@@ -30,7 +30,7 @@ class _ContactsState extends State<Contacts> {
             Padding(
               padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
               child: Text(
-                  AppLocalizations.of(context).translate("cont_addr").capitalize,
+                AppLocalizations.of(context).translate("cont_addr").capitalize,
                 style: TextStyle(
                   fontSize: 20,
                   color: Theme.of(context).primaryColor,

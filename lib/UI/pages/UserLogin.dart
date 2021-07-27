@@ -47,11 +47,11 @@ class _UserLoginState extends State<UserLogin> {
               child: Column(
                 children: [
                   Container(
-                    width: (60*MediaQuery.of(context).size.width)/100,
+                    width: (60 * MediaQuery.of(context).size.width) / 100,
                     child: InputField(
                       labelText: AppLocalizations.of(context)
-                          .translate("email")
-                          .capitalize +
+                              .translate("email")
+                              .capitalize +
                           " o " +
                           AppLocalizations.of(context)
                               .translate("username")
@@ -60,7 +60,7 @@ class _UserLoginState extends State<UserLogin> {
                     ),
                   ),
                   Container(
-                    width: (60*MediaQuery.of(context).size.width)/100,
+                    width: (60 * MediaQuery.of(context).size.width) / 100,
                     child: InputField(
                       labelText: AppLocalizations.of(context)
                           .translate("password")
